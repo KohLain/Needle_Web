@@ -1,0 +1,15 @@
+@import url('https://fonts.cdnfonts.com/css/mona-sans');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Mona-Sans', sans-serif;
+
+  color: white;
+  background-color: black;
+}
+

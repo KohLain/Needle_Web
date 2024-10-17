@@ -1,0 +1,164 @@
+.navbar {
+  padding: 1rem 0;
+
+  font-weight: lighter;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 75rem;
+  margin: 0 auto;
+
+  padding: 0 1rem;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  list-style: none;
+  gap: 2rem;
+
+  margin: 0;
+  padding: 0;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.5s ease;
+}
+
+.nav-link:hover {
+  color: #808080;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styles du burger icon */
+.burger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 1.5rem;
+  height: 1.5rem;
+
+  cursor: pointer;
+
+  z-index: 2;
+}
+
+.burger-icon div {
+  height: 0.15rem;
+  background-color: white;
+  border-radius: 25px;
+  transition: all 0.8s ease;
+}
+
+.burger-icon .bar1, .burger-icon .bar3{
+  width: 60%;
+}
+
+.burger-icon .bar3 {
+  align-self: flex-end;
+}
+
+.burger-icon.open .bar1 {
+  width: 100%;
+  transform: translateY(0.65rem) rotate(-45deg);
+}
+
+.burger-icon.open .bar2 {
+  opacity: 0;
+}
+
+.burger-icon.open .bar3 {
+  width: 100%;
+  transform: translateY(-0.65rem) rotate(45deg);
+}
+
+.slide-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+
+  background-color: #000000;
+  color: white;
+  
+  transition: right 0.8s ease;
+  z-index: 1;
+}
+
+.slide-menu.open {
+  right: 0;
+}
+
+.slide-menu ul {
+  list-style: none;
+}
+
+.slide-menu ul li {
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #ffffff;
+  text-align: center;
+}
+
+.slide-menu ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+
+.slide-menu ul li a:hover {
+  color: #808080;
+}
+
+.logout-button p{
+  transition: color 0.5s ease;
+}
+
+.logout-button p:hover {
+  color: #808080;
+  cursor: pointer;
+}

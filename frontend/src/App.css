@@ -1,0 +1,6 @@
+/* Conteneur principal centré avec une largeur maximale de 75rem */
+.page-container {
+    max-width: 75rem;
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+    padding-top: 5rem;
+}

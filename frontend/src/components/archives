@@ -1,0 +1,25 @@
+{!user ? (
+            // Si aucun utilisateur n'est connecté, afficher le lien Login et le bouton "Vous êtes tatoueurs"
+            <ul className="nav-links">
+              <li className="nav-item">
+                <Link to="/login" className="nav-link">Login</Link>
+              </li>
+            </ul>
+          ) : (
+            // Si un utilisateur est connecté, afficher l'image de profil avec dropdown
+            <div className="profile-container" ref={dropdownRef}>
+              <img
+                src={user.profile_picture ? user.profile_picture : defaultProfile} // Utiliser l'image locale par défaut si aucune n'est fournie
+                alt="Profile"
+                className="profile-image"
+                onClick={toggleDropdown} // Basculer le dropdown au clic
+              />
+              {isDropdownOpen && (
+                <div className="dropdown">
+                  <Link to="/profile" className="dropdown-item">Profile</Link>
+                  <Link to="/settings" className="dropdown-item">Paramètres</Link>
+                  <button onClick={handleLogout} className="dropdown-item-button">Déconnexion</button>
+                </div>
+              )}
+            </div>
+          )}

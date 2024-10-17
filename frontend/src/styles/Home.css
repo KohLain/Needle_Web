@@ -1,0 +1,363 @@
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.background-text {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 16.9rem;
+    font-weight: bolder;
+    line-height: 0.8;
+
+    user-select: none;
+}
+
+.needle {
+    color: #0B0B0B;
+}
+
+.needle-image {
+    background-image: url('../assets/NEEDLE\ Hero\ Background.png');
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.content {
+    position: absolute;
+
+    opacity: 0;
+    transform: translateY(3rem);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+}
+
+.content.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content h1 {
+    font-size: 7rem;
+    font-weight: bolder;
+
+    line-height: 1;
+}
+
+.content p {
+    font-weight: lighter;
+    line-height: 1.5;
+}
+
+.content .buttons {
+    display: flex;
+    gap: 1rem;
+
+    padding-bottom: 5rem;
+}
+
+.content .buttons .btn,
+.content .buttons .btn-secondary {
+    padding: 1rem 2rem;
+
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    border-radius: 30px;
+}
+
+.content .buttons .btn {
+    box-shadow: 0 0 0 0.5px white;
+
+    background: white;
+    color: black;
+}
+
+.content .buttons .btn:hover {
+    background: transparent;
+    color: white;
+}
+
+.content .buttons .btn-secondary {
+    box-shadow: 0 0 0 0.5px white;
+    background: transparent;
+    color: white;
+}
+
+.content .buttons .btn-secondary:hover {
+    background: white;
+    color: black;
+}
+
+.guide-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap : 2.5rem;
+
+    margin-top: 2.5rem;
+    opacity: 0;
+    transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.guide-container.fade-in {
+    opacity: 1;
+}
+
+.guide-container h2 {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.guide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    border-radius: 10px;
+}
+
+.guide-item {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: left;
+
+    gap: 1rem;
+
+    padding: 0 3rem;
+}
+
+.guide-item .step-number {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.guide-item h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.guide-item p {
+    font-size: 1rem;
+    font-weight: lighter;
+    color: #BFBFBF;
+}
+
+.guide-item-separator {
+    height: 0;
+    box-shadow: 0 0 0 0.3px white;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #0B0B0B;
+
+    border-radius: 25px;
+    box-shadow: 0 0 0 0.5px white;
+    padding: 0.5rem;
+}
+
+.search-form input {
+    padding-left: 1rem;
+    border: none;
+    outline: none;
+
+    width: 18rem;
+
+    color: white;
+    font-size: 0.8rem;
+
+    background-color: transparent;
+}
+
+.search-form input::placeholder {
+    color: white;
+}
+
+.search-form select {
+    padding-left: 1rem;
+    border: none;
+    outline: none;
+    appearance: none;
+
+    width: 10rem;
+
+    color: white;
+    font-size: 0.8rem;
+
+    background-color: transparent;
+}
+
+.search-form button {
+    background-color: white;
+    color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    border: 0;
+}
+
+.search-form button:hover {
+    background-color: #cccccc;
+}
+
+.search-form button p {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    margin-top: 5rem;
+
+    opacity: 0;
+    transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.section-header.fade-in {
+    opacity: 1;
+}
+
+.section-header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.section-header-content .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 0 0 0.5px white;
+    border-radius: 50%;
+
+    width: 3rem;
+    height: 3rem;
+
+    font-size: 1.2rem;
+    margin-right: 1.5rem;
+}
+
+.separator {
+    flex-grow: 1;
+    height: 0px;
+    box-shadow: 0 0 0 0.3px white;
+}
+
+.separator h2 {
+    font-weight: normal;
+    font-size: 1rem;
+
+    margin-top: 1rem;
+}
+
+.newsletter-section {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 5rem;
+}
+
+.newsletter-separator {
+    flex-grow: 1;
+    height: 0px;
+    box-shadow: 0 0 0 0.3px white;
+    width: 100%;
+}
+
+.newsletter-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 4rem;
+}
+
+.newsletter-content h2 {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    background-color: #0B0B0B;
+
+    border-radius: 25px;
+    box-shadow: 0 0 0 0.5px white;
+    padding: 0.5rem;
+}
+
+.newsletter-form input {
+    padding-left: 1rem;
+    border: none;
+    outline: none;
+
+    width: 18rem;
+
+    color: white;
+    font-size: 1rem;
+
+    background-color: transparent;
+}
+
+.newsletter-form input::placeholder {
+    color: white;
+}
+
+.newsletter-form button {
+    background-color: white;
+    color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.newsletter-form button p {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.newsletter-section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 2s, transform 2s;
+}
+
+.newsletter-section {
+    opacity: 0;
+    transform: translateY(20px);
+}
